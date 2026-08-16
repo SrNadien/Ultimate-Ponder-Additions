@@ -1,0 +1,39 @@
+{
+    DataVersion: 3955,
+    size: [5, 4, 5],
+    data: [
+        {pos: [0, 0, 0], state: "minecraft:end_stone_bricks"},
+        {pos: [0, 0, 1], state: "minecraft:end_stone_bricks"},
+        {pos: [0, 0, 2], state: "minecraft:end_stone_bricks"},
+        {pos: [0, 0, 3], state: "minecraft:end_stone_bricks"},
+        {pos: [0, 0, 4], state: "minecraft:end_stone_bricks"},
+        {pos: [1, 0, 0], state: "minecraft:end_stone_bricks"},
+        {pos: [1, 0, 1], state: "minecraft:end_stone_bricks"},
+        {pos: [1, 0, 2], state: "minecraft:obsidian"},
+        {pos: [1, 0, 3], state: "minecraft:end_stone_bricks"},
+        {pos: [1, 0, 4], state: "minecraft:end_stone_bricks"},
+        {pos: [2, 0, 0], state: "minecraft:end_stone_bricks"},
+        {pos: [2, 0, 1], state: "minecraft:end_stone_bricks"},
+        {pos: [2, 0, 2], state: "minecraft:end_stone_bricks"},
+        {pos: [2, 0, 3], state: "minecraft:end_stone_bricks"},
+        {pos: [2, 0, 4], state: "minecraft:end_stone_bricks"},
+        {pos: [3, 0, 0], state: "minecraft:end_stone_bricks"},
+        {pos: [3, 0, 1], state: "minecraft:end_stone_bricks"},
+        {pos: [3, 0, 2], state: "minecraft:obsidian"},
+        {pos: [3, 0, 3], state: "minecraft:end_stone_bricks"},
+        {pos: [3, 0, 4], state: "minecraft:end_stone_bricks"},
+        {pos: [4, 0, 0], state: "minecraft:end_stone_bricks"},
+        {pos: [4, 0, 1], state: "minecraft:end_stone_bricks"},
+        {pos: [4, 0, 2], state: "minecraft:end_stone_bricks"},
+        {pos: [4, 0, 3], state: "minecraft:end_stone_bricks"},
+        {pos: [4, 0, 4], state: "minecraft:end_stone_bricks"},
+        {pos: [1, 1, 2], state: "functionalstorage:ender_drawer"},
+        {pos: [3, 1, 2], state: "functionalstorage:ender_drawer"}
+    ],
+    entities: [],
+    palette: [
+        "minecraft:end_stone_bricks",
+        "minecraft:obsidian",
+        "functionalstorage:ender_drawer"
+    ]
+}

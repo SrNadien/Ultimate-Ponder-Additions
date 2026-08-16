@@ -1,0 +1,42 @@
+{
+    DataVersion: 3955,
+    size: [5, 4, 5],
+    data: [
+        {pos: [0, 0, 0], state: "minecraft:grass_block{snowy:false}"},
+        {pos: [0, 0, 1], state: "minecraft:grass_block{snowy:false}"},
+        {pos: [0, 0, 2], state: "minecraft:grass_block{snowy:false}"},
+        {pos: [0, 0, 3], state: "minecraft:grass_block{snowy:false}"},
+        {pos: [0, 0, 4], state: "minecraft:grass_block{snowy:false}"},
+        {pos: [1, 0, 0], state: "minecraft:grass_block{snowy:false}"},
+        {pos: [1, 0, 1], state: "minecraft:hay_block{axis:y}"},
+        {pos: [1, 0, 2], state: "minecraft:hay_block{axis:y}"},
+        {pos: [1, 0, 3], state: "minecraft:hay_block{axis:y}"},
+        {pos: [1, 0, 4], state: "minecraft:grass_block{snowy:false}"},
+        {pos: [2, 0, 0], state: "minecraft:grass_block{snowy:false}"},
+        {pos: [2, 0, 1], state: "minecraft:hay_block{axis:y}"},
+        {pos: [2, 0, 2], state: "minecraft:hay_block{axis:y}"},
+        {pos: [2, 0, 3], state: "minecraft:hay_block{axis:y}"},
+        {pos: [2, 0, 4], state: "minecraft:grass_block{snowy:false}"},
+        {pos: [3, 0, 0], state: "minecraft:grass_block{snowy:false}"},
+        {pos: [3, 0, 1], state: "minecraft:hay_block{axis:y}"},
+        {pos: [3, 0, 2], state: "minecraft:hay_block{axis:y}"},
+        {pos: [3, 0, 3], state: "minecraft:hay_block{axis:y}"},
+        {pos: [3, 0, 4], state: "minecraft:grass_block{snowy:false}"},
+        {pos: [4, 0, 0], state: "minecraft:grass_block{snowy:false}"},
+        {pos: [4, 0, 1], state: "minecraft:grass_block{snowy:false}"},
+        {pos: [4, 0, 2], state: "minecraft:grass_block{snowy:false}"},
+        {pos: [4, 0, 3], state: "minecraft:grass_block{snowy:false}"},
+        {pos: [4, 0, 4], state: "minecraft:grass_block{snowy:false}"},
+        {pos: [0, 1, 2], state: "chickens:henhouse_spruce"},
+        {pos: [2, 1, 2], state: "chickens:henhouse"},
+        {pos: [4, 1, 2], state: "chickens:henhouse_birch"}
+    ],
+    entities: [],
+    palette: [
+        "minecraft:grass_block{snowy:false}",
+        "minecraft:hay_block{axis:y}",
+        "chickens:henhouse",
+        "chickens:henhouse_spruce",
+        "chickens:henhouse_birch"
+    ]
+}

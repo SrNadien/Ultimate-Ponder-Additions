@@ -1,0 +1,42 @@
+{
+    DataVersion: 3955,
+    size: [5, 4, 5],
+    data: [
+        {pos: [0, 0, 0], state: "minecraft:stone"},
+        {pos: [0, 0, 1], state: "minecraft:stone"},
+        {pos: [0, 0, 2], state: "minecraft:stone"},
+        {pos: [0, 0, 3], state: "minecraft:stone"},
+        {pos: [0, 0, 4], state: "minecraft:stone"},
+        {pos: [1, 0, 0], state: "minecraft:stone"},
+        {pos: [1, 0, 1], state: "minecraft:stone"},
+        {pos: [1, 0, 2], state: "minecraft:stone"},
+        {pos: [1, 0, 3], state: "minecraft:stone"},
+        {pos: [1, 0, 4], state: "minecraft:stone"},
+        {pos: [2, 0, 0], state: "minecraft:stone"},
+        {pos: [2, 0, 1], state: "minecraft:stone"},
+        {pos: [2, 0, 2], state: "minecraft:stone"},
+        {pos: [2, 0, 3], state: "minecraft:stone"},
+        {pos: [2, 0, 4], state: "minecraft:stone"},
+        {pos: [3, 0, 0], state: "minecraft:stone"},
+        {pos: [3, 0, 1], state: "minecraft:stone"},
+        {pos: [3, 0, 2], state: "minecraft:stone"},
+        {pos: [3, 0, 3], state: "minecraft:stone"},
+        {pos: [3, 0, 4], state: "minecraft:stone"},
+        {pos: [4, 0, 0], state: "minecraft:stone"},
+        {pos: [4, 0, 1], state: "minecraft:stone"},
+        {pos: [4, 0, 2], state: "minecraft:stone"},
+        {pos: [4, 0, 3], state: "minecraft:stone"},
+        {pos: [4, 0, 4], state: "minecraft:stone"},
+        {pos: [0, 1, 2], state: "industrialforegoing:laser_drill"},
+        {pos: [2, 1, 0], state: "industrialforegoing:laser_drill"},
+        {pos: [2, 1, 2], state: "industrialforegoing:ore_laser_base"},
+        {pos: [2, 1, 4], state: "industrialforegoing:laser_drill"},
+        {pos: [4, 1, 2], state: "industrialforegoing:laser_drill"}
+    ],
+    entities: [],
+    palette: [
+        "minecraft:stone",
+        "industrialforegoing:ore_laser_base",
+        "industrialforegoing:laser_drill"
+    ]
+}

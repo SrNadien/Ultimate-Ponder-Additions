@@ -1,0 +1,40 @@
+{
+    DataVersion: 3955,
+    size: [5, 4, 5],
+    data: [
+        {pos: [0, 0, 0], state: "minecraft:polished_blackstone_bricks"},
+        {pos: [0, 0, 1], state: "minecraft:polished_blackstone_bricks"},
+        {pos: [0, 0, 2], state: "minecraft:polished_blackstone_bricks"},
+        {pos: [0, 0, 3], state: "minecraft:polished_blackstone_bricks"},
+        {pos: [0, 0, 4], state: "minecraft:polished_blackstone_bricks"},
+        {pos: [1, 0, 0], state: "minecraft:polished_blackstone_bricks"},
+        {pos: [1, 0, 1], state: "minecraft:polished_blackstone_bricks"},
+        {pos: [1, 0, 2], state: "minecraft:polished_blackstone_bricks"},
+        {pos: [1, 0, 3], state: "minecraft:polished_blackstone_bricks"},
+        {pos: [1, 0, 4], state: "minecraft:polished_blackstone_bricks"},
+        {pos: [2, 0, 0], state: "minecraft:polished_blackstone_bricks"},
+        {pos: [2, 0, 1], state: "minecraft:polished_blackstone_bricks"},
+        {pos: [2, 0, 2], state: "minecraft:polished_blackstone_bricks"},
+        {pos: [2, 0, 3], state: "minecraft:polished_blackstone_bricks"},
+        {pos: [2, 0, 4], state: "minecraft:polished_blackstone_bricks"},
+        {pos: [3, 0, 0], state: "minecraft:polished_blackstone_bricks"},
+        {pos: [3, 0, 1], state: "minecraft:polished_blackstone_bricks"},
+        {pos: [3, 0, 2], state: "minecraft:polished_blackstone_bricks"},
+        {pos: [3, 0, 3], state: "minecraft:polished_blackstone_bricks"},
+        {pos: [3, 0, 4], state: "minecraft:polished_blackstone_bricks"},
+        {pos: [4, 0, 0], state: "minecraft:polished_blackstone_bricks"},
+        {pos: [4, 0, 1], state: "minecraft:polished_blackstone_bricks"},
+        {pos: [4, 0, 2], state: "minecraft:polished_blackstone_bricks"},
+        {pos: [4, 0, 3], state: "minecraft:polished_blackstone_bricks"},
+        {pos: [4, 0, 4], state: "minecraft:polished_blackstone_bricks"},
+        {pos: [1, 1, 2], state: "minecraft:magma_block"},
+        {pos: [2, 1, 2], state: "chickens:incubator"},
+        {pos: [3, 1, 2], state: "minecraft:magma_block"}
+    ],
+    entities: [],
+    palette: [
+        "minecraft:polished_blackstone_bricks",
+        "chickens:incubator",
+        "minecraft:magma_block"
+    ]
+}

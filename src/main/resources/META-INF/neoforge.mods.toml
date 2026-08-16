@@ -1,0 +1,67 @@
+modLoader = "javafml"
+loaderVersion = "${loader_version}"
+license = "${license}"
+issueTrackerURL = "https://github.com/NadienDev-MC-Mods/UltimatePonderAdditions/issues"
+
+[[mods]]
+modId = "${modid}"
+version = "${mod_version}"
+displayName = "${mod_named}"
+authors = "${author}"
+description = '''${description}'''
+
+[[dependencies."${modid}"]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1.0,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies."${modid}"]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,1.21.2)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies."${modid}"]]
+modId = "ponder"
+type = "required"
+versionRange = "[1.0.60,2.0)"
+ordering = "AFTER"
+side = "CLIENT"
+
+[[dependencies."${modid}"]]
+modId = "guideme"
+type = "required"
+versionRange = "[21.1.0,22.0)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies."${modid}"]]
+modId = "industrialforegoing"
+type = "optional"
+versionRange = "[0,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies."${modid}"]]
+modId = "functionalstorage"
+type = "optional"
+versionRange = "[0,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies."${modid}"]]
+modId = "chickens"
+type = "optional"
+versionRange = "[0,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies."${modid}"]]
+modId = "ae2"
+type = "optional"
+versionRange = "[0,)"
+ordering = "AFTER"
+side = "BOTH"

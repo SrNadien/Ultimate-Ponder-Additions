@@ -1,0 +1,41 @@
+{
+    DataVersion: 3955,
+    size: [5, 4, 5],
+    data: [
+        {pos: [0, 0, 0], state: "minecraft:stone_bricks"},
+        {pos: [0, 0, 1], state: "minecraft:stone_bricks"},
+        {pos: [0, 0, 2], state: "minecraft:stone_bricks"},
+        {pos: [0, 0, 3], state: "minecraft:stone_bricks"},
+        {pos: [0, 0, 4], state: "minecraft:stone_bricks"},
+        {pos: [1, 0, 0], state: "minecraft:stone_bricks"},
+        {pos: [1, 0, 1], state: "minecraft:stone_bricks"},
+        {pos: [1, 0, 2], state: "minecraft:stone_bricks"},
+        {pos: [1, 0, 3], state: "minecraft:stone_bricks"},
+        {pos: [1, 0, 4], state: "minecraft:stone_bricks"},
+        {pos: [2, 0, 0], state: "minecraft:stone_bricks"},
+        {pos: [2, 0, 1], state: "minecraft:stone_bricks"},
+        {pos: [2, 0, 2], state: "minecraft:stone_bricks"},
+        {pos: [2, 0, 3], state: "minecraft:stone_bricks"},
+        {pos: [2, 0, 4], state: "minecraft:stone_bricks"},
+        {pos: [3, 0, 0], state: "minecraft:stone_bricks"},
+        {pos: [3, 0, 1], state: "minecraft:stone_bricks"},
+        {pos: [3, 0, 2], state: "minecraft:stone_bricks"},
+        {pos: [3, 0, 3], state: "minecraft:stone_bricks"},
+        {pos: [3, 0, 4], state: "minecraft:stone_bricks"},
+        {pos: [4, 0, 0], state: "minecraft:stone_bricks"},
+        {pos: [4, 0, 1], state: "minecraft:stone_bricks"},
+        {pos: [4, 0, 2], state: "minecraft:stone_bricks"},
+        {pos: [4, 0, 3], state: "minecraft:stone_bricks"},
+        {pos: [4, 0, 4], state: "minecraft:stone_bricks"},
+        {pos: [1, 1, 2], state: "functionalstorage:simple_compacting_drawer"},
+        {pos: [2, 1, 2], state: "functionalstorage:compacting_drawer"},
+        {pos: [3, 1, 2], state: "minecraft:iron_block"}
+    ],
+    entities: [],
+    palette: [
+        "minecraft:stone_bricks",
+        "functionalstorage:compacting_drawer",
+        "functionalstorage:simple_compacting_drawer",
+        "minecraft:iron_block"
+    ]
+}

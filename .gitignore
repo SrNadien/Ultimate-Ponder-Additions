@@ -1,0 +1,26 @@
+# gradle
+.gradle/
+build/
+out/
+mcmodsrepo/
+
+# neoforge / moddev
+run/
+runs/
+run-data/
+repo/
+
+# ide
+.idea/
+*.iml
+*.ipr
+*.iws
+.classpath
+.project
+.settings/
+bin/
+.vscode/
+
+# os
+Thumbs.db
+.DS_Store

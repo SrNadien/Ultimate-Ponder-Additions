@@ -1,0 +1,43 @@
+{
+    DataVersion: 3955,
+    size: [5, 4, 5],
+    data: [
+        {pos: [0, 0, 0], state: "ae2:sky_stone_brick"},
+        {pos: [0, 0, 1], state: "ae2:sky_stone_brick"},
+        {pos: [0, 0, 2], state: "ae2:sky_stone_brick"},
+        {pos: [0, 0, 3], state: "ae2:sky_stone_brick"},
+        {pos: [0, 0, 4], state: "ae2:sky_stone_brick"},
+        {pos: [1, 0, 0], state: "ae2:sky_stone_brick"},
+        {pos: [1, 0, 1], state: "ae2:sky_stone_brick"},
+        {pos: [1, 0, 2], state: "ae2:sky_stone_brick"},
+        {pos: [1, 0, 3], state: "ae2:sky_stone_brick"},
+        {pos: [1, 0, 4], state: "ae2:sky_stone_brick"},
+        {pos: [2, 0, 0], state: "ae2:sky_stone_brick"},
+        {pos: [2, 0, 1], state: "ae2:sky_stone_brick"},
+        {pos: [2, 0, 2], state: "ae2:sky_stone_brick"},
+        {pos: [2, 0, 3], state: "ae2:sky_stone_brick"},
+        {pos: [2, 0, 4], state: "ae2:sky_stone_brick"},
+        {pos: [3, 0, 0], state: "ae2:sky_stone_brick"},
+        {pos: [3, 0, 1], state: "ae2:sky_stone_brick"},
+        {pos: [3, 0, 2], state: "ae2:sky_stone_brick"},
+        {pos: [3, 0, 3], state: "ae2:sky_stone_brick"},
+        {pos: [3, 0, 4], state: "ae2:sky_stone_brick"},
+        {pos: [4, 0, 0], state: "ae2:sky_stone_brick"},
+        {pos: [4, 0, 1], state: "ae2:sky_stone_brick"},
+        {pos: [4, 0, 2], state: "ae2:sky_stone_brick"},
+        {pos: [4, 0, 3], state: "ae2:sky_stone_brick"},
+        {pos: [4, 0, 4], state: "ae2:sky_stone_brick"},
+        {pos: [0, 1, 2], state: "ae2:vibration_chamber"},
+        {pos: [2, 1, 2], state: "ae2:charger"},
+        {pos: [4, 1, 2], state: "ae2:energy_acceptor"},
+        {pos: [2, 2, 2], state: "ae2:crank"}
+    ],
+    entities: [],
+    palette: [
+        "ae2:sky_stone_brick",
+        "ae2:charger",
+        "ae2:crank",
+        "ae2:vibration_chamber",
+        "ae2:energy_acceptor"
+    ]
+}

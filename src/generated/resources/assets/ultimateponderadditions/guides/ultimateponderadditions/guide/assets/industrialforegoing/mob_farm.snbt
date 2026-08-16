@@ -1,0 +1,43 @@
+{
+    DataVersion: 3955,
+    size: [5, 4, 5],
+    data: [
+        {pos: [0, 0, 0], state: "minecraft:stone_bricks"},
+        {pos: [0, 0, 1], state: "minecraft:stone_bricks"},
+        {pos: [0, 0, 2], state: "minecraft:stone_bricks"},
+        {pos: [0, 0, 3], state: "minecraft:stone_bricks"},
+        {pos: [0, 0, 4], state: "minecraft:stone_bricks"},
+        {pos: [1, 0, 0], state: "minecraft:stone_bricks"},
+        {pos: [1, 0, 1], state: "minecraft:stone_bricks"},
+        {pos: [1, 0, 2], state: "minecraft:stone_bricks"},
+        {pos: [1, 0, 3], state: "minecraft:stone_bricks"},
+        {pos: [1, 0, 4], state: "minecraft:stone_bricks"},
+        {pos: [2, 0, 0], state: "minecraft:stone_bricks"},
+        {pos: [2, 0, 1], state: "minecraft:stone_bricks"},
+        {pos: [2, 0, 2], state: "minecraft:stone_bricks"},
+        {pos: [2, 0, 3], state: "minecraft:stone_bricks"},
+        {pos: [2, 0, 4], state: "minecraft:stone_bricks"},
+        {pos: [3, 0, 0], state: "minecraft:stone_bricks"},
+        {pos: [3, 0, 1], state: "minecraft:stone_bricks"},
+        {pos: [3, 0, 2], state: "minecraft:stone_bricks"},
+        {pos: [3, 0, 3], state: "minecraft:stone_bricks"},
+        {pos: [3, 0, 4], state: "minecraft:stone_bricks"},
+        {pos: [4, 0, 0], state: "minecraft:stone_bricks"},
+        {pos: [4, 0, 1], state: "minecraft:stone_bricks"},
+        {pos: [4, 0, 2], state: "minecraft:stone_bricks"},
+        {pos: [4, 0, 3], state: "minecraft:stone_bricks"},
+        {pos: [4, 0, 4], state: "minecraft:stone_bricks"},
+        {pos: [1, 1, 0], state: "industrialforegoing:mob_slaughter_factory"},
+        {pos: [1, 1, 2], state: "industrialforegoing:mob_duplicator"},
+        {pos: [3, 1, 0], state: "minecraft:barrel{facing:up,open:false}"},
+        {pos: [3, 1, 2], state: "industrialforegoing:mob_crusher"}
+    ],
+    entities: [],
+    palette: [
+        "minecraft:stone_bricks",
+        "industrialforegoing:mob_duplicator",
+        "industrialforegoing:mob_crusher",
+        "minecraft:barrel{facing:up,open:false}",
+        "industrialforegoing:mob_slaughter_factory"
+    ]
+}

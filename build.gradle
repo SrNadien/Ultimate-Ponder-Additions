@@ -1,0 +1,178 @@
+plugins {
+    id 'java-library'
+    id 'eclipse'
+    id 'idea'
+    id 'maven-publish'
+    id 'net.neoforged.moddev' version '2.0.143'
+}
+
+version = "${mcversion}-${mod_version}-${tag_lanzador}"
+group = "${group}"
+base {
+    archivesName = "${mod_named}"
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+neoForge {
+    version = "${neoversion}"
+
+    parchment {
+        minecraftVersion = "1.21.1"
+        mappingsVersion = "2024.11.17"
+    }
+
+    runs {
+        client {
+            client()
+            systemProperty 'forge.enabledGameTestNamespaces', "${modid}"
+            systemProperty "guideme.${modid}.guide.sources", file('src/main/resources/assets/' + modid + '/guides/' + modid + '/guide').getAbsolutePath()
+            systemProperty "guideme.${modid}.guide.sourcesNamespace", "${modid}"
+        }
+
+        server {
+            server()
+            systemProperty 'forge.enabledGameTestNamespaces', "${modid}"
+            programArgument '--nogui'
+        }
+
+        data {
+            data()
+            programArguments.addAll '--mod', "${modid}", '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
+        }
+
+        configureEach {
+            systemProperty 'forge.logging.markers', 'REGISTRIES'
+            logLevel = org.slf4j.event.Level.DEBUG
+        }
+    }
+
+    mods {
+        "${modid}" {
+            sourceSet(sourceSets.main)
+        }
+    }
+}
+
+sourceSets.main.resources {
+    srcDir 'src/generated/resources'
+    exclude '.cache'
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        name = 'CreateMod'
+        url = 'https://maven.createmod.net'
+        content {
+            includeGroup 'net.createmod.ponder'
+            includeGroup 'net.createmod.catnip'
+            includeGroup 'dev.engine-room.flywheel'
+        }
+    }
+    maven {
+        name = 'BlameJared'
+        url = 'https://maven.blamejared.com'
+    }
+    maven {
+        name = 'Modrinth'
+        url = 'https://api.modrinth.com/maven'
+        content {
+            includeGroup 'maven.modrinth'
+        }
+    }
+}
+
+dependencies {
+    compileOnly("net.createmod.ponder:Ponder-NeoForge-${mcversion}:${ponder_version}") { transitive = false }
+    runtimeOnly("net.createmod.ponder:Ponder-NeoForge-${mcversion}:${ponder_version}") { transitive = false }
+    runtimeOnly "dev.engine-room.flywheel:flywheel-neoforge-${mcversion}:${flywheel_version}"
+
+    compileOnly "org.appliedenergistics:guideme:${guideme_version}:api"
+    runtimeOnly "org.appliedenergistics:guideme:${guideme_version}"
+
+    compileOnly "mezz.jei:jei-${mcversion}-common-api:${jei_version}"
+    compileOnly "mezz.jei:jei-${mcversion}-neoforge-api:${jei_version}"
+    runtimeOnly "mezz.jei:jei-${mcversion}-neoforge:${jei_version}"
+
+    if (project.findProperty('runtime_integrated_mods').toString().toBoolean()) {
+        implementation("com.hrznstudio:titanium:${titanium_version}") { transitive = false }
+        implementation("com.buuz135:industrialforegoing:${industrialforegoing_version}") { transitive = false }
+        implementation("maven.modrinth:functional-storage:${functionalstorage_version}") { transitive = false }
+        implementation("maven.modrinth:modern-chickens:${modernchickens_version}") { transitive = false }
+        implementation("org.appliedenergistics:appliedenergistics2:${ae2_version}") { transitive = false }
+    }
+}
+
+test {
+    enabled = false
+}
+
+jar {
+    manifest {
+        attributes([
+                "Specification-Title": archivesBaseName,
+                "Specification-Vendor": "${author}",
+                "Specification-Version": "1",
+                "Implementation-Title": archivesBaseName,
+                "Implementation-Version": "${version}",
+                "Implementation-Vendor" :"${author}",
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+        ])
+    }
+}
+
+tasks.withType(ProcessResources).configureEach {
+    var replaceProperties = [
+            mcversion              : mcversion,
+            mod_version            : mod_version,
+            modid                  : modid,
+            author                 : author,
+            mod_named              : mod_named,
+            mod_name               : mod_name,
+            tag_lanzador           : tag_lanzador,
+            description            : description,
+            license                : license,
+            neoversion             : neoversion,
+            loader_version         : loader_version,
+            jei_version            : jei_version,
+            ponder_version         : ponder_version,
+            guideme_version        : guideme_version,
+            industrialforegoing_version: industrialforegoing_version,
+            titanium_version       : titanium_version,
+            functionalstorage_version: functionalstorage_version,
+            modernchickens_version : modernchickens_version,
+            ae2_version            : ae2_version,
+            flywheel_version       : flywheel_version
+    ]
+    inputs.properties replaceProperties
+
+    filesMatching(['META-INF/neoforge.mods.toml']) {
+        expand replaceProperties
+    }
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifact jar
+        }
+    }
+    repositories {
+        maven {
+            url "file:///${project.projectDir}/mcmodsrepo"
+        }
+    }
+}
+
+idea {
+    module {
+        downloadSources = true
+        downloadJavadoc = true
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.getRelease().set(21)
+}
