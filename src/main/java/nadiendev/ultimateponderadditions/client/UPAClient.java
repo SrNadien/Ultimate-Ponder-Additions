@@ -18,7 +18,7 @@ public class UPAClient {
     private static void onClientSetup(FMLClientSetupEvent event) {
         PonderIntegration.init();
 
-        if (UltimatePonderAdditions.isLoaded("guideme") && UPAConfig.ENABLE_GUIDEBOOK.get()) {
+        if (UPAConfig.ENABLE_GUIDEBOOK.get()) {
             UPAGuide.build();
         }
     }

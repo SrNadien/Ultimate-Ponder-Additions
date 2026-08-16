@@ -5,7 +5,6 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public final class SpanishLang {
-
     public static final Map<String, String> ENTRIES = build();
 
     private SpanishLang() {
@@ -177,73 +176,73 @@ public final class SpanishLang {
 
         m.put(p + "chickens_roost.header", "El Ponedero");
         m.put(p + "chickens_roost.text_1",
-                "Un Ponedero convierte una gallina en un generador de recursos tranquilo y ordenado: ni paseos ni cacareos.");
+                "Un Ponedero guarda gallinas como objeto y va soltando su producción en sus propias ranuras de salida. Sin bichos sueltos.");
         m.put(p + "chickens_roost.text_2",
-                "Mete hasta dieciséis gallinas del mismo tipo. Cuanto más rápidas, más ponen.");
+                "Gallinas dentro, recursos fuera: hierro, redstone, piedra luminosa, lo que produzca ese tipo.");
         m.put(p + "chickens_roost.text_3",
-                "Cada gallina suelta su propio recurso en vez de un huevo: hierro, redstone, piedra luminosa y demás.");
+                "Las mejoras de Velocidad y de Pila dentro del ponedero suben el ritmo y la cantidad.");
         m.put(p + "chickens_roost.text_4",
-                "Un Recolector al lado del ponedero lo vacía solo.");
+                "Un Recolector saca la producción terminada de todos los ponederos a su alcance y la guarda en su inventario.");
         m.put(p + "chickens_roost.text_5",
-                "El Ponedero Mecánico es la versión con energía: más rápido, y admite mejoras.");
+                "El Ponedero Mecánico va con RF y tiene cuatro filas de gallinas independientes, cada una con su salida.");
         m.put(p + "chickens_roost.text_6",
-                "La Ganancia, el Crecimiento y la Fuerza de una gallina deciden cuánto produce y a qué ritmo.");
+                "Un Nido cerca proyecta un aura que acelera todos los ponederos que alcanza.");
 
         m.put(p + "chickens_breeder.header", "Criar gallinas");
         m.put(p + "chickens_breeder.text_1",
-                "Los tipos nuevos de gallina salen de la cría, y la cría ocurre en una Criadora.");
+                "La Criadora coge dos gallinas como objeto y semillas, y produce descendencia.");
         m.put(p + "chickens_breeder.text_2",
-                "Dos gallinas y semillas. La cría puede salir del tipo de cualquiera de los padres, o del tipo hijo.");
+                "Los dos padres tienen que ser gallinas normales. Los gallos no van aquí.");
         m.put(p + "chickens_breeder.text_3",
-                "Cada cruce tiene su receta: una Gallina de Hierro y una de Pedernal dan una de Oro, por ejemplo.");
+                "Qué gallina sale lo decide el árbol de cría: una de Hierro y una de Pedernal dan una de Oro.");
         m.put(p + "chickens_breeder.text_4",
-                "Los Nidos aparecen de forma natural en el mundo y guardan la primera gallina de un tipo salvaje.");
+                "El Nido es otra máquina distinta. Lleva un gallo y semillas, y no produce ningún objeto.");
         m.put(p + "chickens_breeder.text_5",
-                "El Nido Mecánico es la versión fabricada y con energía que montas cuando ya estás asentado.");
+                "Lo que hace es un aura: mientras quema semillas, todos los ponederos a su alcance van más rápido.");
         m.put(p + "chickens_breeder.text_6",
-                "Usa un Analizador sobre una gallina para leer sus estadísticas antes de decidir qué cruzar.");
+                "El Nido Mecánico hace lo mismo con un Gallo Robot y RF en vez de semillas.");
         m.put(p + "chickens_breeder.text_7",
-                "Cruzar dos padres con buenas estadísticas es como se empujan Ganancia y Crecimiento hasta el tope de diez.");
+                "Usa un Analizador sobre una gallina para leer sus estadísticas antes de decidir el cruce.");
 
         m.put(p + "chickens_henhouse.header", "El Gallinero");
         m.put(p + "chickens_henhouse.text_1",
-                "Las gallinas sueltas siguen poniendo. El Gallinero es lo que recoge lo que dejan.");
+                "Las gallinas que sueltan recursos por el suelo necesitan algo que los recoja. Eso es el Gallinero.");
         m.put(p + "chickens_henhouse.text_2",
-                "Recoge cualquier cosa que suelte una gallina en el chunk que lo rodea.");
+                "Recoge lo que sueltan las gallinas cercanas en un inventario de 3x3 dentro de él.");
         m.put(p + "chickens_henhouse.text_3",
-                "También se come balas de heno: cada bala convertida en tierra le permite recoger bastante más.");
+                "Funciona con FE, o con balas de heno como combustible. Quemar heno deja tierra de subproducto.");
         m.put(p + "chickens_henhouse.text_4",
                 "Hay un Gallinero por cada tipo de madera, para que pegue con el corral que hayas construido.");
         m.put(p + "chickens_henhouse.text_5",
-                "Barato y de principio de partida. Cuando tengas energía, un Ponedero con Recolector lo supera de largo.");
+                "Barato y de principio. Un Ponedero con Recolector es más limpio cuando puedas permitírtelo.");
 
         m.put(p + "chickens_incubator.header", "La Incubadora");
         m.put(p + "chickens_incubator.text_1",
-                "La Incubadora convierte Huevos de Colores en la gallina que llevan pintada.");
+                "La Incubadora convierte los huevos de invocación de Modern Chickens en las gallinas como objeto que aceptan las máquinas.");
         m.put(p + "chickens_incubator.text_2",
-                "Mete los huevos y espera. No necesita energía, solo calor.");
+                "Mete los huevos y dale energía. Cada conversión tarda 200 ticks.");
         m.put(p + "chickens_incubator.text_3",
-                "El calor viene de lava o fuego debajo y al lado. Más calor, más rápido eclosionan.");
+                "Va con RF, no con calor. Ni lava ni fuego.");
         m.put(p + "chickens_incubator.text_4",
-                "Las gallinas que salen así conservan las estadísticas guardadas en el huevo, así que un buen huevo hay que guardarlo.");
+                "Las gallinas como objeto son lo que aceptan Ponederos, Criadoras y Nidos, así que todo empieza aquí.");
         m.put(p + "chickens_incubator.text_5",
-                "Esta es la forma rápida de convertir una línea de cría en una granja que funcione.");
+                "Un huevo salido de una Máquina de Rociado Avian entra aquí directo para convertirse en la gallina.");
 
         m.put(p + "chickens_roost_generator.header", "Energía a partir de gallinas");
         m.put(p + "chickens_roost_generator.text_1",
-                "Las gallinas no solo ponen recursos sólidos. Las máquinas Avian los convierten en energía y fluidos.");
+                "Las gallinas ponen algo más que recursos sólidos. Las máquinas Avian convierten el resto en algo aprovechable.");
         m.put(p + "chickens_roost_generator.text_2",
-                "Empieza con un Ponedero Mecánico manteniendo una bandada produciendo sin parar.");
+                "El Convertidor de Flujo Avian vacía Huevos de Flujo en un búfer de FE y lo empuja a las máquinas de al lado.");
         m.put(p + "chickens_roost_generator.text_3",
-                "El Convertidor de Flujo Avian convierte esa producción en Forge Energy.");
+                "El Convertidor de Fluidos Avian rompe Huevos Líquidos en un tanque y alimenta tanques o tuberías adyacentes.");
         m.put(p + "chickens_roost_generator.text_4",
-                "El Convertidor de Fluidos Avian hace lo mismo con fluidos: lava de las Gallinas de Lava, por ejemplo.");
+                "El Convertidor Químico Avian hace lo mismo con Huevos Químicos y de Gas, hacia un búfer de Mekanism.");
         m.put(p + "chickens_roost_generator.text_5",
-                "El Convertidor Químico Avian se ocupa de la parte química para los mods que la quieran.");
+                "La Máquina de Rociado Avian gasta RF y un reactivo para crear huevos de invocación especiales.");
         m.put(p + "chickens_roost_generator.text_6",
-                "Las mejoras de RF en las ranuras de la máquina suben producción, eficiencia y tamaño del búfer.");
+                "El Generador de Ponedero es la vía directa: Gallinas de Flujo de Redstone dentro, FE/t fuera.");
         m.put(p + "chickens_roost_generator.text_7",
-                "Una pared de ponederos alimentando convertidores es una central eléctrica perfectamente seria a media partida.");
+                "Una pared de ponederos alimentando convertidores es una central eléctrica seria a media partida.");
 
         m.put(p + "ae2_inscriber.header", "El Inscriptor");
         m.put(p + "ae2_inscriber.text_1",

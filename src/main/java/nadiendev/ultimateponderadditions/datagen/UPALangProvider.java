@@ -8,7 +8,6 @@ import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.LanguageProvider;
 
 public class UPALangProvider extends LanguageProvider {
-
     private final Supplier<Map<String, String>> entries;
 
     public UPALangProvider(PackOutput output, String locale, Supplier<Map<String, String>> entries) {

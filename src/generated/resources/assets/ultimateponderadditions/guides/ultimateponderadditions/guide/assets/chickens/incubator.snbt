@@ -27,14 +27,15 @@
         {pos: [4, 0, 2], state: "minecraft:polished_blackstone_bricks"},
         {pos: [4, 0, 3], state: "minecraft:polished_blackstone_bricks"},
         {pos: [4, 0, 4], state: "minecraft:polished_blackstone_bricks"},
-        {pos: [1, 1, 2], state: "minecraft:magma_block"},
+        {pos: [1, 1, 2], state: "chickens:avian_dousing_machine"},
         {pos: [2, 1, 2], state: "chickens:incubator"},
-        {pos: [3, 1, 2], state: "minecraft:magma_block"}
+        {pos: [3, 1, 2], state: "chickens:roost"}
     ],
     entities: [],
     palette: [
         "minecraft:polished_blackstone_bricks",
         "chickens:incubator",
-        "minecraft:magma_block"
+        "chickens:avian_dousing_machine",
+        "chickens:roost"
     ]
 }

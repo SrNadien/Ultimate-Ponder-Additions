@@ -15,11 +15,6 @@ public final class UPARegistries {
     }
 
     public static void register(IEventBus modEventBus) {
-        if (!UltimatePonderAdditions.isLoaded("guideme")) {
-            UltimatePonderAdditions.LOGGER.info("GuideME is not installed - skipping the guidebook creative tab.");
-            return;
-        }
-
         TABS.register("main", () -> CreativeModeTab.builder()
                 .title(Component.translatable("itemGroup." + UltimatePonderAdditions.MODID))
                 .icon(GuideItems::guideStack)

@@ -9,7 +9,7 @@ public interface GuideAddon {
     String id();
 
     default Collection<String> requiredMods() {
-        return List.of(id(), "guideme");
+        return List.of(id());
     }
 
     void configureGuide(GuideBuilder builder);

@@ -13,111 +13,111 @@ public final class ChickensScenes {
         ScenePresets.intro(scene, util, "chickens_roost", "The Roost");
 
         ScenePresets.say(scene, 5,
-                "A Roost turns a chicken into a quiet, tidy resource generator - no wandering, no clucking.");
+                "A Roost holds chicken items and produces their drops into its own output slots. No loose birds.");
 
         ScenePresets.input(scene, util, 5,
-                "Put up to sixteen chickens of one type inside. Faster chickens lay faster.", 2, 1, 2);
+                "Chickens in, resources out: iron, redstone, glowstone, whatever that type produces.", 2, 1, 2);
 
         ScenePresets.say(scene, 5,
-                "Each chicken drops its own resource instead of an egg: iron, redstone, glowstone, and so on.");
+                "Speed and Stack upgrades inside the roost raise how fast and how much it makes.");
 
         ScenePresets.output(scene, util, 5,
-                "A Collector next to the roost empties it automatically.", 2, 1, 4);
+                "A Roost Collector pulls the finished output from every Roost in range into its own inventory.",
+                2, 1, 4);
 
         ScenePresets.highlight(scene, 5, util.select().position(1, 1, 2), PonderPalette.BLUE,
-                "The Mechanical Roost is the powered version: faster, and it accepts upgrades.");
+                "The Mechanical Roost runs on RF and has four independent chicken rows, each with its own output.");
 
         ScenePresets.outro(scene, 5,
-                "A chicken's Gain, Growth and Strength stats decide how much it produces and how fast.");
+                "A Nest placed nearby projects an aura that speeds up every Roost it reaches.");
     }
 
     public static void breeder(SceneBuilder scene, SceneBuildingUtil util) {
         ScenePresets.intro(scene, util, "chickens_breeder", "Breeding chickens");
 
-        ScenePresets.say(scene, 5,
-                "New chicken types come from breeding, and breeding happens in a Breeder.");
-
         ScenePresets.input(scene, util, 5,
-                "Two chickens plus seeds. The offspring can be either parent's type, or their child type.",
-                2, 1, 2);
+                "The Chicken Breeder takes two chicken items and seeds, and produces offspring.", 2, 1, 2);
 
         ScenePresets.say(scene, 5,
-                "Every breed has a recipe: an Iron Chicken and a Flint Chicken make a Gold Chicken, say.");
+                "Both parents have to be ordinary chickens. Roosters do not go in here.");
+
+        ScenePresets.say(scene, 5,
+                "Which chicken you get follows the breeding tree: an Iron and a Flint chicken give Gold.");
 
         ScenePresets.highlight(scene, 5, util.select().position(1, 1, 2), PonderPalette.GREEN,
-                "Nests spawn naturally in the world and hold the first chicken of a wild type.");
-
-        ScenePresets.highlight(scene, 5, util.select().position(3, 1, 2), PonderPalette.OUTPUT,
-                "The Mechanical Nest is the crafted, powered version you build once you are set up.");
+                "The Nest is a different machine. It holds a rooster and seeds, and makes no items at all.");
 
         ScenePresets.say(scene, 5,
-                "Use an Analyzer on a chicken to read its stats before deciding what to breed.");
+                "What it makes is an aura: while it burns seeds, every Roost in range works faster.");
+
+        ScenePresets.highlight(scene, 5, util.select().position(3, 1, 2), PonderPalette.OUTPUT,
+                "The Mechanical Nest does the same with a Robot Rooster and RF instead of seeds.");
 
         ScenePresets.outro(scene, 5,
-                "Breeding two high-stat parents is how you push Gain and Growth towards the cap of ten.");
+                "Use an Analyzer on a chicken to read its stats before you decide what to pair.");
     }
 
     public static void henhouse(SceneBuilder scene, SceneBuildingUtil util) {
         ScenePresets.intro(scene, util, "chickens_henhouse", "The Henhouse");
 
         ScenePresets.say(scene, 5,
-                "Chickens roaming loose still lay. The Henhouse is what picks up after them.");
+                "Chickens dropping resources on the floor need something to pick them up. That is the Henhouse.");
 
         ScenePresets.highlight(scene, 5, util.select().position(2, 1, 2), PonderPalette.GREEN,
-                "It gathers anything a chicken drops in the chunk around it.");
+                "It collects nearby chicken drops into a 3x3 inventory inside it.");
 
         ScenePresets.say(scene, 5,
-                "It also eats hay bales: one bale converted to dirt lets it collect a good deal more.");
+                "It runs on FE, or on hay bales as fuel. Burning hay leaves dirt behind as a byproduct.");
 
         ScenePresets.say(scene, 5,
-                "There is a Henhouse for every wood type, so it can match whatever you built the pen out of.");
+                "There is a Henhouse for every wood type, so it matches whatever you built the coop out of.");
 
         ScenePresets.outro(scene, 5,
-                "Cheap and early-game. Once you have power, a Roost with a Collector outpaces it easily.");
+                "Cheap and early. A Roost with a Collector is tidier once you can afford it.");
     }
 
     public static void incubator(SceneBuilder scene, SceneBuildingUtil util) {
         ScenePresets.intro(scene, util, "chickens_incubator", "The Incubator");
 
-        ScenePresets.say(scene, 5,
-                "The Incubator hatches Coloured Eggs into the chicken type painted on them.");
-
         ScenePresets.input(scene, util, 5,
-                "Drop the eggs in and wait. No power needed - only heat.", 2, 1, 2);
-
-        ScenePresets.highlight(scene, 5,
-                util.select().fromTo(1, 1, 2, 3, 1, 2), PonderPalette.RED,
-                "Heat comes from lava or fire underneath and beside it. More heat, faster hatching.");
+                "The Incubator turns Modern Chickens spawn eggs into the portable chicken items the machines take.",
+                2, 1, 2);
 
         ScenePresets.say(scene, 5,
-                "Chickens hatched this way keep the stats stored on the egg, so good eggs are worth saving.");
+                "Drop the eggs in and give it power. One conversion takes 200 ticks.");
+
+        ScenePresets.needsPower(scene, util, 2, 1, 2,
+                "It runs on RF, not on heat. No lava or fire involved.");
+
+        ScenePresets.highlight(scene, 5, util.select().position(3, 1, 2), PonderPalette.OUTPUT,
+                "Chicken items are what Roosts, Breeders and Nests accept, so everything starts here.");
 
         ScenePresets.outro(scene, 5,
-                "This is the fast way to turn a breeding line into a working farm.");
+                "An egg out of an Avian Dousing Machine goes straight in here to become the chicken.");
     }
 
     public static void generator(SceneBuilder scene, SceneBuildingUtil util) {
         ScenePresets.intro(scene, util, "chickens_roost_generator", "Power from chickens");
 
         ScenePresets.say(scene, 5,
-                "Chickens do not only lay solid resources. The Avian machines turn them into energy and fluids.");
-
-        ScenePresets.highlight(scene, 5, util.select().position(2, 1, 2), PonderPalette.GREEN,
-                "It starts with a Mechanical Roost keeping a flock producing around the clock.");
+                "Chickens lay more than solid resources. The Avian machines turn the rest into something usable.");
 
         ScenePresets.highlight(scene, 5, util.select().position(1, 1, 2), PonderPalette.OUTPUT,
-                "The Avian Flux Converter turns that output into Forge Energy.");
+                "The Avian Flux Converter drains Flux Eggs into an FE buffer and pushes it to adjacent machines.");
 
         ScenePresets.highlight(scene, 5, util.select().position(3, 1, 2), PonderPalette.BLUE,
-                "The Avian Fluid Converter does the same for fluids - lava from Lava Chickens, for instance.");
+                "The Avian Fluid Converter cracks Liquid Eggs into a tank and feeds adjacent tanks or pipes.");
 
         ScenePresets.highlight(scene, 5, util.select().position(2, 1, 4), PonderPalette.FAST,
-                "The Avian Chemical Converter handles the chemical side for the mods that want it.");
+                "The Avian Chemical Converter does the same with Chemical and Gas Eggs, into a Mekanism buffer.");
+
+        ScenePresets.highlight(scene, 5, util.select().position(2, 1, 0), PonderPalette.RED,
+                "The Avian Dousing Machine burns RF plus a reagent to make specialised spawn eggs.");
 
         ScenePresets.say(scene, 5,
-                "RF upgrades in the machine's slots raise output, efficiency and buffer size.");
+                "The Roost Generator is the direct route: Redstone Flux Chickens in, FE/t out.");
 
         ScenePresets.outro(scene, 5,
-                "A wall of roosts feeding converters is a perfectly serious mid-game power plant.");
+                "A wall of roosts feeding converters is a serious mid-game power plant.");
     }
 }

@@ -36,8 +36,8 @@ public final class ChickensSchematics {
             .builder("chickens/incubator", 5, 4, 5)
             .basePlate("minecraft:polished_blackstone_bricks")
             .set(2, 1, 2, MC + "incubator")
-            .set(1, 1, 2, "minecraft:magma_block")
-            .set(3, 1, 2, "minecraft:magma_block")
+            .set(1, 1, 2, MC + "avian_dousing_machine")
+            .set(3, 1, 2, MC + "roost")
             .build();
 
     public static final SchematicTemplate GENERATOR = SchematicTemplate

@@ -11,7 +11,6 @@ import nadiendev.ultimateponderadditions.internal.ponder.PonderIntegration;
 import net.createmod.ponder.foundation.PonderIndex;
 
 public final class UPALang {
-
     private static final String MODID = UltimatePonderAdditions.MODID;
 
     private static Map<String, String> english;

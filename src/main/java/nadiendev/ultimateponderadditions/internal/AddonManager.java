@@ -151,7 +151,7 @@ public final class AddonManager {
                 register((PonderAddon) instance);
             }
 
-            if (UltimatePonderAdditions.isLoaded("guideme") && GuideAddon.class.isAssignableFrom(clazz)) {
+            if (GuideAddon.class.isAssignableFrom(clazz)) {
                 if (instance == null) {
                     instance = clazz.getDeclaredConstructor().newInstance();
                 }

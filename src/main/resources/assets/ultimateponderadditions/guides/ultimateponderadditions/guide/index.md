@@ -6,30 +6,29 @@ navigation:
 
 # Ultimate Ponder Additions
 
-This guide explains the machines of a handful of tech mods, and pairs every explanation with an
-animated [Ponder](https://github.com/Creators-of-Create/Ponder) scene you can play in-game.
+Machines from a few tech mods, explained, with an animated [Ponder](https://github.com/Creators-of-Create/Ponder)
+scene for each one.
 
-Two ways to read it:
+Two ways to read it. Here, as a book: scroll, click, drag the 3D scenes around. Or in Ponder: hover
+any documented block in your inventory and hold the Ponder key, W by default, and watch it get built
+and explained step by step.
 
-- **Here**, as a book: scroll, click, drag the 3D scenes around.
-- **In Ponder**, as an animation: hover any documented block in your inventory and hold the Ponder
-  key (**W** by default) to watch it get built and explained step by step.
+Both are driven by the same structure files, so what you read here is what you see there.
 
-Both are driven by the same structures, so what you read here is what you see there.
+<SubPages />
 
-## Sections
+## About AE2
 
-- [Industrial Foregoing](industrial-foregoing.md) — farms, mob grinders, laser drills and black holes.
-- [Functional Storage](functional-storage.md) — drawers, controllers and cabinets.
-- [Modern Chickens](modern-chickens.md) — roosts, breeders and chicken-powered generators.
-- [Applied Energistics 2](applied-energistics.md) — networks, channels, autocrafting.
+Applied Energistics 2 has Ponder scenes here too, but no chapter in this book. It ships its own
+GuideME guidebook and there is no point competing with it. Hover an AE2 machine and hold W for the
+scene; open AE2's own guide for the written version.
 
 ## Not everything here is installed
 
-Pages come from resource packs, so this guide shows all four sections whether or not you have all
-four mods. Ponder scenes are the opposite: they only appear for mods that are actually loaded.
+Pages come from resource packs, so every section shows up whether or not you have the mod it covers.
+Ponder scenes are the opposite and only appear for mods that are actually loaded.
 
 ## Adding your own
 
-Ultimate Ponder Additions is an open frame, not a closed set. Any mod - or any resource pack - can
-add scenes and pages to it. See [Extending this guide](extending.md).
+Any mod, and any resource pack, can add scenes and pages to this. See
+[Extending this guide](extending.md).
