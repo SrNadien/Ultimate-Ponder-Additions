@@ -56,6 +56,14 @@ public final class UPAConfig {
         return false;
     }
 
+    public static boolean guidebookEnabled() {
+        try {
+            return ENABLE_GUIDEBOOK.get();
+        } catch (IllegalStateException e) {
+            return true;
+        }
+    }
+
     public static boolean ponderScenesEnabled() {
         try {
             return ENABLE_PONDER_SCENES.get();

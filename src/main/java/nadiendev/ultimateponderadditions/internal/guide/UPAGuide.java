@@ -21,6 +21,8 @@ public final class UPAGuide {
     }
 
     public static void build() {
+        AddonManager.discover();
+
         if (guide != null) {
             return;
         }

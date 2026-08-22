@@ -1,0 +1,43 @@
+{
+    DataVersion: 3955,
+    size: [5, 4, 5],
+    data: [
+        {pos: [0, 0, 0], state: "minecraft:stone_bricks"},
+        {pos: [0, 0, 1], state: "minecraft:stone_bricks"},
+        {pos: [0, 0, 2], state: "minecraft:stone_bricks"},
+        {pos: [0, 0, 3], state: "minecraft:stone_bricks"},
+        {pos: [0, 0, 4], state: "minecraft:stone_bricks"},
+        {pos: [1, 0, 0], state: "minecraft:stone_bricks"},
+        {pos: [1, 0, 1], state: "minecraft:stone_bricks"},
+        {pos: [1, 0, 2], state: "minecraft:stone_bricks"},
+        {pos: [1, 0, 3], state: "minecraft:stone_bricks"},
+        {pos: [1, 0, 4], state: "minecraft:stone_bricks"},
+        {pos: [2, 0, 0], state: "minecraft:stone_bricks"},
+        {pos: [2, 0, 1], state: "minecraft:stone_bricks"},
+        {pos: [2, 0, 2], state: "minecraft:stone_bricks"},
+        {pos: [2, 0, 3], state: "minecraft:stone_bricks"},
+        {pos: [2, 0, 4], state: "minecraft:stone_bricks"},
+        {pos: [3, 0, 0], state: "minecraft:stone_bricks"},
+        {pos: [3, 0, 1], state: "minecraft:stone_bricks"},
+        {pos: [3, 0, 2], state: "minecraft:stone_bricks"},
+        {pos: [3, 0, 3], state: "minecraft:stone_bricks"},
+        {pos: [3, 0, 4], state: "minecraft:stone_bricks"},
+        {pos: [4, 0, 0], state: "minecraft:stone_bricks"},
+        {pos: [4, 0, 1], state: "minecraft:stone_bricks"},
+        {pos: [4, 0, 2], state: "minecraft:stone_bricks"},
+        {pos: [4, 0, 3], state: "minecraft:stone_bricks"},
+        {pos: [4, 0, 4], state: "minecraft:stone_bricks"},
+        {pos: [1, 1, 2], state: "minecraft:cobblestone"},
+        {pos: [2, 1, 0], state: "exdeorum:infested_leaves"},
+        {pos: [2, 1, 2], state: "minecraft:gravel"},
+        {pos: [3, 1, 2], state: "minecraft:sand"}
+    ],
+    entities: [],
+    palette: [
+        "minecraft:stone_bricks",
+        "minecraft:cobblestone",
+        "minecraft:gravel",
+        "minecraft:sand",
+        "exdeorum:infested_leaves"
+    ]
+}

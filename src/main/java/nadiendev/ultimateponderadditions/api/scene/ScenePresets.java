@@ -100,4 +100,25 @@ public final class ScenePresets {
         say(scene, seconds, text);
         scene.markAsFinished();
     }
+
+    public static void showAll(SceneBuilder scene, SceneBuildingUtil util) {
+        scene.world().showSection(util.select().everywhere(), Direction.DOWN);
+    }
+
+    public static TextElementBuilder pointText(SceneBuilder scene, int ticks, String text,
+                                               double x, double y, double z) {
+        return scene.overlay()
+                .showText(ticks)
+                .text(text)
+                .pointAt(new Vec3(x, y, z))
+                .placeNearTarget();
+    }
+
+    public static Selection box(SceneBuildingUtil util, int x1, int y1, int z1, int x2, int y2, int z2) {
+        return util.select().fromTo(x1, y1, z1, x2, y2, z2);
+    }
+
+    public static void show(SceneBuilder scene, Selection selection, Direction from) {
+        scene.world().showSection(selection, from);
+    }
 }

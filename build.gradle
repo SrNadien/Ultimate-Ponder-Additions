@@ -75,6 +75,20 @@ repositories {
         url = 'https://maven.blamejared.com'
     }
     maven {
+        name = 'GeckoLib'
+        url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+        content {
+            includeGroup 'software.bernie.geckolib'
+        }
+    }
+    maven {
+        name = 'Modmaven'
+        url = 'https://modmaven.dev'
+        content {
+            includeGroup 'mekanism'
+        }
+    }
+    maven {
         name = 'Modrinth'
         url = 'https://api.modrinth.com/maven'
         content {
@@ -101,6 +115,21 @@ dependencies {
         implementation("maven.modrinth:functional-storage:${functionalstorage_version}") { transitive = false }
         implementation("maven.modrinth:modern-chickens:${modernchickens_version}") { transitive = false }
         implementation("org.appliedenergistics:appliedenergistics2:${ae2_version}") { transitive = false }
+
+        implementation("maven.modrinth:ex-deorum:${exdeorum_version}") { transitive = false }
+        implementation("maven.modrinth:botany-pots:${botanypots_version}") { transitive = false }
+        implementation("maven.modrinth:bookshelf-lib:${bookshelf_version}") { transitive = false }
+        implementation("net.darkhax.pricklemc:prickle-neoforge-${mcversion}:${prickle_version}") { transitive = false }
+        implementation("maven.modrinth:pylons:${pylons_version}") { transitive = false }
+        implementation("maven.modrinth:ars-nouveau:${arsnouveau_version}") { transitive = false }
+        implementation("software.bernie.geckolib:geckolib-neoforge-${mcversion}:${geckolib_version}") { transitive = false }
+        implementation("maven.modrinth:curios:${curios_version}") { transitive = false }
+        implementation("mekanism:Mekanism:${mekanism_version}") { transitive = false }
+        implementation("mekanism:Mekanism:${mekanism_version}:generators") { transitive = false }
+
+        // Create is deliberately absent: 6.0.11 requires ponder [1.0.85,) and the
+        // Ponder-NeoForge-1.21.1 artifact stops at 1.0.69, so the two cannot coexist.
+        // Drop a Create jar in run/mods manually if you need its pack scenes.
     }
 }
 
@@ -131,7 +160,7 @@ tasks.withType(ProcessResources).configureEach {
             mod_named              : mod_named,
             mod_name               : mod_name,
             tag_lanzador           : tag_lanzador,
-            description            : description,
+            description            : project.description,
             license                : license,
             neoversion             : neoversion,
             loader_version         : loader_version,
@@ -175,4 +204,32 @@ idea {
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
     options.getRelease().set(21)
+}
+
+def githubMods = [
+        "ModernFoundry-${mcversion}-${modernfoundry_version}-NeoForge.jar":
+                "https://github.com/Modern-Mods/ModernFoundry/releases/download/v${modernfoundry_version}/ModernFoundry-${mcversion}-${modernfoundry_version}-NeoForge.jar",
+        "Hilt-${mcversion}-${hilt_version}.jar":
+                "https://github.com/Modern-Mods/Hilt/releases/download/v${hilt_version}/Hilt-${mcversion}-${hilt_version}.jar"
+]
+
+tasks.register('downloadGithubMods') {
+    description = 'Downloads dev-runtime mods that are only published as GitHub releases.'
+    def target = file('run/mods')
+    outputs.files(githubMods.keySet().collect { new File(target, it) })
+    onlyIf { project.findProperty('runtime_integrated_mods').toString().toBoolean() }
+    doLast {
+        target.mkdirs()
+        githubMods.each { name, url ->
+            def dest = new File(target, name)
+            if (!dest.exists()) {
+                logger.lifecycle("Downloading ${name}")
+                dest.withOutputStream { out -> new URL(url).withInputStream { from -> out << from } }
+            }
+        }
+    }
+}
+
+tasks.matching { it.name in ['runClient', 'runServer', 'runData'] }.configureEach {
+    dependsOn 'downloadGithubMods'
 }

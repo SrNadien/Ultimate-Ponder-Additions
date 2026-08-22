@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 import nadiendev.ultimateponderadditions.UltimatePonderAdditions;
 import nadiendev.ultimateponderadditions.api.SceneRegistration;
+import nadiendev.ultimateponderadditions.internal.AddonManager;
 import net.createmod.ponder.api.registration.MultiSceneBuilder;
 import net.createmod.ponder.api.registration.PonderSceneRegistrationHelper;
 import net.createmod.ponder.api.registration.StoryBoardEntry;
@@ -59,7 +60,7 @@ public final class SceneRegistrationImpl implements SceneRegistration {
 
     @Override
     public boolean isModLoaded(String modId) {
-        return UltimatePonderAdditions.isLoaded(modId);
+        return AddonManager.isDataGeneration() || UltimatePonderAdditions.isLoaded(modId);
     }
 
     private ResourceLocation resolve(String id) {

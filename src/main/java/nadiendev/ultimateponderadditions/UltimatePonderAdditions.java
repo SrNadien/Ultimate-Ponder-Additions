@@ -30,6 +30,10 @@ public class UltimatePonderAdditions {
         return ResourceLocation.fromNamespaceAndPath(MODID, path);
     }
 
+    public static boolean ponderLoaded() {
+        return isLoaded("ponder");
+    }
+
     public static boolean isLoaded(String modId) {
         return ModList.get().isLoaded(modId);
     }

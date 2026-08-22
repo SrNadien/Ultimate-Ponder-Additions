@@ -17,11 +17,14 @@ Both are driven by the same structure files, so what you read here is what you s
 
 <SubPages />
 
-## About AE2
+## About AE2 and the Custom tab
 
 Applied Energistics 2 has Ponder scenes here too, but no chapter in this book. It ships its own
 GuideME guidebook and there is no point competing with it. Hover an AE2 machine and hold W for the
 scene; open AE2's own guide for the written version.
+
+The Custom category in Ponder is the same: hand-built setups rather than mod documentation, so they
+live as scenes only.
 
 ## Not everything here is installed
 
@@ -30,5 +33,6 @@ Ponder scenes are the opposite and only appear for mods that are actually loaded
 
 ## Adding your own
 
-Any mod, and any resource pack, can add scenes and pages to this. See
-[Extending this guide](extending.md).
+Any mod, and any resource pack, can add scenes and pages to this. Drop markdown into
+`assets/<yourmod>/guides/ultimateponderadditions/guide/` and it appears here. `API.md` in the
+repository covers the Ponder side.

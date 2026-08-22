@@ -7,9 +7,9 @@ them, plus an API so other mods can supply their own.
 
 Ponder is the animated in-game explainer you get by hovering an item and holding a key. GuideME is
 the markdown-driven guidebook AE2 uses. Both are libraries, and both are only as useful as the
-content mods write for them. Industrial Foregoing, Functional Storage, Modern Chickens and Applied
-Energistics 2 never shipped Ponder scenes, so this adds them, along with a guidebook covering the
-same ground.
+content mods write for them. Industrial Foregoing, Functional Storage, Modern Chickens, Modern
+Foundry, Ex Deorum, Botany Pots and Applied Energistics 2 never shipped Ponder scenes, so this adds
+them, plus a guidebook for most of them.
 
 Minecraft 1.21.1, NeoForge 21.1.240.
 
@@ -25,13 +25,23 @@ drawers, ender drawers, the Armory Cabinet.
 **Modern Chickens** - Roost and Collector, Breeder and Nests, Henhouse, Incubator, the Avian
 converters.
 
+**Modern Foundry** - Seared Melter, the Smeltery multiblock, casting with faucets and basins, and
+the drain/duct/chute trio.
+
+**Ex Deorum** - Barrel, Crucible, Sieve, hammers and crooks, and the mechanical versions of both.
+
+**Botany Pots** - the plain, hopper and waxed pots.
+
 **Applied Energistics 2** - Inscriber, budding quartz and growth accelerators, a minimal ME network,
-crafting CPUs, Charger and Crank.
+crafting CPUs, Charger and Crank. Ponder scenes only: AE2 already ships its own GuideME guidebook,
+so there is no chapter for it here.
 
-Twenty scenes in total, registered against about ninety blocks (every drawer wood, every crafting
-storage tier, and so on). Each one also has a section in the guidebook with the same structure
-embedded as a 3D scene.
+**Custom** - hand-built setups ported from a KubeJS pack: AE2 layouts, Create farms, and the
+Mekanism multiblocks. Scenes only, for the same reason.
 
+Fifty scenes in total, registered against several hundred blocks (every drawer wood, every crafting
+storage tier, all sixty-odd pot materials). Six of the mods also get a guidebook chapter, one page
+per machine, with the same structures embedded as 3D scenes.
 ## Using it in game
 
 Hover a documented block in your inventory and hold the Ponder key (W by default). The guidebook has
@@ -39,11 +49,10 @@ its own creative tab, or you can open it with GuideME's hotkey.
 
 ## Dependencies
 
-Ponder is required on the client, since without it there is nothing for the scenes to run in. It
-pulls Flywheel with it. Install it separately.
+GuideME is required. Install it separately.
 
-GuideME is optional and also installed separately. Without it you lose the book, but the Ponder
-scenes still work.
+Ponder is optional, and pulls Flywheel with it. Without it the mod still loads and the guidebook
+still works; you just get no scenes. That is the only thing that changes.
 
 Both are third-party libraries. Bugs in the Ponder UI or the guidebook renderer belong in their
 issue trackers, not this one.
@@ -72,16 +81,34 @@ JAVA_HOME="C:/Program Files/Java/jdk-21" ./gradlew build
 
 ## Dev runtime
 
-`gradlew runClient` starts with all four documented mods loaded so the scenes can actually be
-tested. They come from:
+`gradlew runClient` starts with every documented mod loaded, so the scenes can actually be tested.
+Where each one comes from:
 
-- Industrial Foregoing and Titanium: `maven.blamejared.com`
-- Functional Storage and Modern Chickens: the Modrinth maven, since neither publishes anywhere else
-- Applied Energistics 2: Maven Central
+| Source | Mods |
+| --- | --- |
+| `maven.blamejared.com` | Industrial Foregoing, Titanium, Prickle |
+| Modrinth maven | Functional Storage, Modern Chickens, Ex Deorum, Botany Pots, Bookshelf, Pylons, Ars Nouveau, Curios |
+| Maven Central | Applied Energistics 2 |
+| `modmaven.dev` | Mekanism and Mekanism Generators |
+| GeckoLib's Cloudsmith | GeckoLib |
+| GitHub releases | Modern Foundry, Hilt |
 
-Versions are in `gradle.properties`. Set `runtime_integrated_mods=false` to build without any of
+Modern Foundry and Hilt are published as GitHub releases only, so `downloadGithubMods` fetches them
+into `run/mods` before any run task. It skips files that are already there.
+
+Two traps worth knowing about, both of which cost me a startup:
+
+The Modrinth maven serves whichever file it considers primary for a version number. When a mod
+publishes the same number for Fabric and NeoForge you can silently get the Fabric jar, which then
+does not load and shows up as a missing dependency somewhere else. Prickle and GeckoLib both do
+this, so they come from loader-specific mavens instead.
+
+Create is deliberately absent. Version 6.0.11 requires ponder `[1.0.85,)` and the published
+`Ponder-NeoForge-1.21.1` artifact stops at 1.0.69, so the two cannot be on the classpath together.
+Drop a Create jar into `run/mods` by hand if you need its pack scenes.
+
+Versions live in `gradle.properties`. Set `runtime_integrated_mods=false` to build without any of
 them.
-
 ## Config
 
 `config/ultimateponderadditions-client.toml`:
@@ -134,7 +161,7 @@ src/main/java/nadiendev/ultimateponderadditions/
 
 src/main/resources/assets/ultimateponderadditions/
   guides/      guidebook pages
-  lang/        hand-written translations
+  lang/        generated translations
 ```
 
 ## License

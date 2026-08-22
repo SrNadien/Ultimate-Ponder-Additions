@@ -31,6 +31,10 @@ public final class AddonManager {
     private AddonManager() {
     }
 
+    public static boolean isDataGeneration() {
+        return dataGeneration;
+    }
+
     public static void setDataGeneration(boolean enabled) {
         dataGeneration = enabled;
     }
@@ -41,7 +45,9 @@ public final class AddonManager {
         }
         discovered = true;
 
-        BuiltInAddons.registerAll();
+        if (UltimatePonderAdditions.ponderLoaded()) {
+            BuiltInAddons.registerAll();
+        }
         scanAnnotations();
 
         UltimatePonderAdditions.LOGGER.info("Discovered {} Ponder addon(s) and {} guide addon(s)",
@@ -146,7 +152,7 @@ public final class AddonManager {
             Class<?> clazz = Class.forName(className, false, AddonManager.class.getClassLoader());
             Object instance = null;
 
-            if (PonderAddon.class.isAssignableFrom(clazz)) {
+            if (UltimatePonderAdditions.ponderLoaded() && PonderAddon.class.isAssignableFrom(clazz)) {
                 instance = clazz.getDeclaredConstructor().newInstance();
                 register((PonderAddon) instance);
             }
@@ -158,7 +164,7 @@ public final class AddonManager {
                 register((GuideAddon) instance);
             }
 
-            if (instance == null) {
+            if (instance == null && UltimatePonderAdditions.ponderLoaded()) {
                 UltimatePonderAdditions.LOGGER.warn(
                         "{} is annotated with @UPAAddon but implements neither PonderAddon nor GuideAddon",
                         className);
